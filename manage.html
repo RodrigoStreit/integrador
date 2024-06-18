@@ -86,7 +86,40 @@
 
             <input type="submit" value="Remover">
         </form>
+
+        <div id="bar"></div>
+
+        <form action="functional/update_item.php" method="POST">
+
+            <h1>Alterar Produto</h1>
+            
+                <label for="id">ID do Produto</label>
+            <input type="number" name="id">
+                <label for="product">Nome:</label>
+            <input type="text" name="product">
+                <label for="price">Preço:</label>
+            <input type="text" name="price">
+                <label for="quantity">Estoque:</label>
+            <input type="number" name="quantity">
+                <label for="type">Condição:</label>
+            
+            <div>
+                <input type="radio" name="type" class="type" value="Usado">Usado <br>
+                
+                <input type="radio" name="type" class="type" value="Novo">Novo <br>
+                
+                <input type="radio" name="type" class="type" value="Recondicionado">Recondicionado <br>
+            
+                <input type="radio" name="type" class="type" value="Nulo" checked disabled>Nulo <br>
+            
+                <input type="submit">
+            </div>
+            </form>
+
+            
         <a href="painel.html"><button>sair</button></a>
+
+
     </fieldset>
 
 </body>
