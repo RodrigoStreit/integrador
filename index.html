@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    
+    <form action="functional/login.php" method="post">
+        <h1>WebSite's Name</h1>
+
+        <label for="user" id="label1">User</label>
+        <input type="text" name="user" class="input-text" id="user" maxlength="128" required>
+
+        <label for="password" id="label2">Password</label>
+        <input type="password" name="password" class="input-text" id="password" maxlength="128" required>
+        <span>Ainda não tem uma conta?<a href="cadastro.html">clique aqui</a></span>
+
+        <div id="submit_camp">
+            <input type="submit" value="LOGIN" id="submit">
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro/Remoção</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background: url(style/bg.webp) no-repeat;
+        background-size: cover;
+    }
+    fieldset{
+        margin-top: 6%;
+        background-color: rgba(255, 255, 255, 0.75);
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.75);
+        border: none;
+        width: 700px;
+        height: 400px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    form{
+        width: 300px;
+        height: 380px;
+        margin: 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+
+    }
+    #bar{
+        height: 400px;
+        width: 1px;
+        background-color: black;
+    }
+</style>
+<body>
+    
+    <fieldset>
+        <form action="functional/add_item.php" method="post">
+            <h1>Cadastrar Produto</h1>
+
+            <Label for="product">PRODUTO: </Label>
+            <input type="text" name="product"> <br>
+
+            <Label for="product">PREÇO: </Label>
+            <input type="text" name="price"> <br>
+
+            <Label for="product">ESTOQUE: </Label>
+            <input type="text" name="quantity"> <br>
+
+            <label for="type">TIPO DE PEÇA:</label>
+            
+            <div>
+                <input type="radio" name="type" class="type" value="Usado">Usado <br>
+                
+                <input type="radio" name="type" class="type" value="Novo">Novo <br>
+                
+                <input type="radio" name="type" class="type" value="Recondicionado">Recondicionado <br>
+
+                <input type="radio" name="type" class="type" value="Nulo" checked disabled>Nulo <br>
+            </div>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+
+        <div id="bar"></div>
+
+        <form action="functional/rem_item.php" method="post">
+            <h1>Remover Produto</h1>
+
+            <Label for="product">ID DO PRODUTO: </Label>
+            <input type="number" name="id"> <br>
+
+            <input type="submit" value="Remover">
+        </form>
+        <a href="painel.html"><button>sair</button></a>
+    </fieldset>
+
+</body>
+</html>
